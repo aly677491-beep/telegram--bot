@@ -1,4 +1,22 @@
 <?php
+// إظهار الأخطاء للتأكد في حال حدث أي طارئ
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+include("data.php");
+include("class.php");
+include("Telegram.php");
+
+// استقبال رسائل وأوامر المستخدمين من تيليجرام بصمت
+$content = file_get_contents("php://input");
+$update = json_decode($content, true);
+
+if (!$update) {
+    echo "Bot Server is Online and Ready!";
+    exit;
+}
+
+// هنا يتم معالجة أوامر البوت الخاصة بك بشكل طبيعي<?php
 // تفعيل إظهار الأخطاء لمعرفة سبب أي مشكلة برمجية بدلاً من الشاشة البيضاء
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
