@@ -26,7 +26,7 @@ function servd(){
 }
 
 // ========== إعدادات البوت ==========
-$token = "8597336903:AAFD-skzlnbYH1q8M_nIMmUS7Q7Dy_CxU48"; // TOKEN الخاص بك
+$token = "8756107525:AAHRgGHDv9KKXLgl_OXvXi2FsRwVPgJblI4"; // TOKEN الخاص بك
 $ch = $json["chaneel"]; // ايدي قناة الصيد
 $admin = 7124462252; // ايديك في تيليجرام
 $api_key = $json["api_key"]; // API Key
