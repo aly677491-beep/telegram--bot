@@ -1,4 +1,25 @@
 <?php
+// تفعيل إظهار الأخطاء لمعرفة سبب أي مشكلة برمجية بدلاً من الشاشة البيضاء
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include("data.php");
+
+// استقبال التحديثات من تيليجرام
+$content = file_get_contents("php://input");
+$update = json_decode($content, true);
+
+if(!$update) {
+    echo "Bot is working successfully on Railway!";
+    exit;
+}
+
+// استدعاء باقي ملفات البوت الأساسية
+include("class.php");
+include("Telegram.php");
+
+// باقي كود التشغيل الخاص ببوتك...<?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 // ========== تفعيل عرض الأخطاء للتصحيح ==========
